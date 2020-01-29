@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="com.internousdev.ecsite10.action." extends="struts-default">
+
+	<action name="HomeAction" class="com.internousdev.ecsite10.action.HomeAction" method="execute">
+			<result name="success">login.jsp</result>
+			<result name="loginPass">buy.jsp</result>
+	</action>
+
+
+	<!-- ログイン -->
+	<action name="LoginAction" class="com.internousdev.ecsite10.action.LoginAction" method="execute">
+			<result name="success">buy.jsp</result>
+			<result name="error">home.jsp</result>
+	</action>
+
+	<action name="GoHomeAction" class="com.internousdev.ecsite10.action.GoHomeAction" method="execute">
+			<result name="success">home.jsp</result>
+	</action>
+
+
+	<!-- ログアウト -->
+
+	<action name="LogoutAction" class="com.internousdev.ecsite10.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result>
+	</action>
+
+
+	<!-- 新規登録 -->
+	<action name="GoUserCreateAction" class="com.internousdev.ecsite10.action.GoUserCreateAction" method="execute">
+			<result name="success">newUserCreate.jsp</result>
+	</action>
+
+	<action name="UserCreateCheckAction" class="com.internousdev.ecsite10.action.UserCreateCheckAction" method="execute">
+			<result name="success">userCreateCheck.jsp</result>
+			<result name="error">newUserCreate.jsp</result>
+	</action>
+
+	<action name="UserCreateInputAction" class="com.internousdev.ecsite10.action.UserCreateInputAction" method="execute">
+			<result name="success">UserCreateOK.jsp</result>
+	</action>
+
+
+	<!-- 購入 -->
+	<action name="BuyAction" class="com.internousdev.ecsite10.action.BuyAction" method="execute">
+			<result name="success">buyCheck.jsp</result>
+	</action>
+
+	<action name="BuyInputAction" class="com.internousdev.ecsite10.action.BuyInputAction" method="execute">
+			<result name="success">buyOK.jsp</result>
+	</action>
+
+
+	<!-- 購入履歴 -->
+	<action name="MyPageAction" class="com.internousdev.ecsite10.action.MyPageAction" method="execute">
+			<result name="success">mypage.jsp</result>
+			<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- 管理者 -->
+	<action name="AdminAction" class="com.internousdev.ecsite10.action.AdminAction" method="execute">
+			<result name="success">admin.jsp</result>
+	</action>
+
+
+		<!-- 新規商品登録 -->
+	<action name="ItemCreateAction" class="com.internousdev.ecsite10.action.ItemCreateAction" method="execute">
+			<result name="success">itemCreate.jsp</result>
+	</action>
+
+	<action name="ItemCreateConfirmAction" class="com.internousdev.ecsite10.action.ItemCreateConfirmAction" method="execute">
+			<result name="success">itemCreateConfirm.jsp</result>
+			<result name="error">itemCreate.jsp</result>
+	</action>
+
+	<action name="ItemCreateCompleteAction" class="com.internousdev.ecsite10.action.ItemCreateCompleteAction" method="execute">
+			<result name="success">itemCreateComplete.jsp</result>
+	</action>
+
+
+		<!-- 商品一覧→削除 -->
+	<action name="ItemListAction" class="com.internousdev.ecsite10.action.ItemListAction" method="execute">
+			<result name="success">itemList.jsp</result>
+	</action>
+
+	<action name="ItemListDeleteConfirmAction" class="com.internousdev.ecsite10.action.ItemListDeleteConfirmAction" method="execute">
+			<result name="success">itemListDeleteConfirm.jsp</result>
+	</action>
+
+	<action name="ItemListDeleteCompleteAction" class="com.internousdev.ecsite10.action.ItemListDeleteCompleteAction" method="execute">
+			<result name="success">itemListDeleteComplete.jsp</result>
+	</action>
+
+
+
+	</package>
+</struts>
