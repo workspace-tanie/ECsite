@@ -9,10 +9,10 @@ public class DBConnector {
 	private static String driverName="com.mysql.jdbc.Driver";
 
 	private static String url=
-			"jdbc:mysql://localhost/ecsite10";
+			"jdbc:mysql://localhost/ecsite11";
 
-	private static String user ="root11";
-	private static String password="ningenhusin";
+	private static String user ="root";
+	private static String password="mysql";
 
 	public Connection getConnection(){
 		Connection con = null;
